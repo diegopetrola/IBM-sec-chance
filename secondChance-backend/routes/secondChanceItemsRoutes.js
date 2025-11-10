@@ -1,11 +1,8 @@
 const express = require("express");
 const multer = require("multer");
-const path = require("path");
-const fs = require("fs");
 const router = express.Router();
 const connectToDatabase = require("../models/db");
 const logger = require("../logger");
-const { json } = require("stream/consumers");
 
 // Define the upload directory path
 const directoryPath = "public/images";
@@ -73,9 +70,10 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-// Update and existing item
+// Update an existing item
 router.put("/:id", async (req, res, next) => {
   try {
+    const id = req.params.id;
     const db = await connectToDatabase();
     const collection = db.collection("secondChanceItems");
     const secondChanceItem = await collection.findOne({ id });
