@@ -7,7 +7,6 @@ let url = `${process.env.MONGO_URL}`;
 let filename = `${__dirname}/secondChanceItems.json`;
 const dbName = "secondChance";
 const collectionName = "secondChanceItems";
-
 // notice you have to load the array of items into the data object
 const data = JSON.parse(fs.readFileSync(filename, "utf8")).docs;
 

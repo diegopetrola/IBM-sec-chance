@@ -20,7 +20,8 @@ app.use(express.json());
 
 // Route files
 
-// authRoutes Step 2: import the authRoutes and store in a constant called authRoutes
+const authRoutes = require("./routes/authRoutes");
+app.use("/api/auth", authRoutes);
 
 // Search API
 const searchRoutes = require("./routes/searchRoutes");
