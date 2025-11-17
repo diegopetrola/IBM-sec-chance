@@ -1,14 +1,39 @@
-###
+### REGISTER
 POST http://localhost:3060/api/auth/register
 Content-Type: application/json
 Cookie: jhub-reverse-tool-proxy=s%3Adf8852e8-fe28-47ac-ab62-cb52fc5bbef5.CxZgc7USbJXpxTv4Vs6BH6esBtnhnYv%2FKQ098HtCm5s
 
 {
-  "firstName": "Lachlan",
-  "lastName": "Baker",
-  "email": "lachie@gmail.com",
-  "password": "lac123"
+  "firstName": "123",
+  "lastName": "123",
+  "email": "123@mail.com",
+  "password": "123"
 
 }
 
-###
+### LOGIN
+POST http://localhost:3060/api/auth/login
+Content-Type: application/json
+Cookie: jhub-reverse-tool-proxy=s%3Adf8852e8-fe28-47ac-ab62-cb52fc5bbef5.CxZgc7USbJXpxTv4Vs6BH6esBtnhnYv%2FKQ098HtCm5s
+
+
+{
+  "email": "123@email.com",
+  "password": "123"
+}
+
+### GET /
+GET http://localhost:3060/
+Content-Type: application/json
+Cookie: jhub-reverse-tool-proxy=s%3Adf8852e8-fe28-47ac-ab62-cb52fc5bbef5.CxZgc7USbJXpxTv4Vs6BH6esBtnhnYv%2FKQ098HtCm5s
+
+### UPDATE USER
+PUT http://localhost:3060/api/auth/update
+email: laura@gmail.com
+Content-Type: application/json
+Cookie: jhub-reverse-tool-proxy=s%3A48bd0518-14a7-4be7-a498-b680be3e0dd0.VdP4w1OI%2BqvZJ5Rg2v%2BGqqKpL0KnqsZ6zF%2BjpK0gg5k
+
+
+{
+  "firstName":"Lauraa"
+}

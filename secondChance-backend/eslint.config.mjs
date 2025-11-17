@@ -9,6 +9,7 @@ export default defineConfig([
     plugins: { js },
     extends: ["js/recommended"],
     languageOptions: { globals: globals.node },
+    rules: { argsIgnorePattern: "^_" },
   },
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
   {

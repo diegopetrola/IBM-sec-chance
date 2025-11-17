@@ -36,15 +36,10 @@ const logger = require("./logger");
 
 app.use(pinoHttp({ logger }));
 
-// Use Routes
-// authRoutes Step 2: add the authRoutes and to the server by using the app.use() method.
-//{{insert code here}}
-
-// Items API Task 2: add the secondChanceItemsRoutes to the server by using the app.use() method.
-//{{insert code here}}
+app.use("/images", express.static("public/images"));
 
 // Global Error Handler
-app.use((err, req, res) => {
+app.use((err, req, res, _next) => {
   console.error(err);
   res.status(500).send("Internal Server Error");
 });
